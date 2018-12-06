@@ -1,5 +1,6 @@
 package org.plate.domain.plate.persistence;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
@@ -9,6 +10,7 @@ import org.plate.domain.plate.Plate;
 import org.plate.persistence.PersistenceRuntimeException;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcDaoSupport;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -25,13 +27,16 @@ public class PlateDaoImpl extends NamedParameterJdbcDaoSupport implements PlateD
 			final String sql = "INSERT INTO plate "
 					+ "(prefix,letter1,letter2,number1,number2,number3,"
 					+ "number4,suffix,regNo,digit1,digit2,digit3,"
-					+ "digit4,doubledigit,tripledigit,quaddigit,palindromix,paired,rating) "
+					+ "digit4,doubledigit,tripledigit,quaddigit,palindromic,paired,rating,listprice) "
 					+ "VALUES (?,?,?,?,?,?,"
 					+ "?,?,?,?,?,?,"
-					+ "?,?,?,?,?,?,?)";
-				getJdbcTemplate().update(sql
-			        , new PreparedStatementSetter() {
-						public void setValues(PreparedStatement ps) throws SQLException {
+					+ "?,?,?,?,?,?,?,?)";
+			
+				getJdbcTemplate().update( new PreparedStatementCreator() {
+			        public PreparedStatement createPreparedStatement(Connection connection) 
+			        		throws SQLException{
+			        	PreparedStatement ps =
+				                connection.prepareStatement(sql, new String[] {"id"});
 			    	  	ps.setString(1, plate.getPrefix());
 						ps.setString(2, plate.getLetter1());
 						ps.setString(3, plate.getLetter2());
@@ -51,8 +56,11 @@ public class PlateDaoImpl extends NamedParameterJdbcDaoSupport implements PlateD
 						ps.setBoolean(17, plate.getPalindromic());
 						ps.setBoolean(18, plate.getPaired());
 						ps.setInt(19, plate.getRating());
+						ps.setDouble(20, plate.getListPrice());
+						return ps;
 			      }
 			    },keyHolder);
+				
 				final long id = keyHolder.getKey().longValue();
 				plate.setId(id);
 		}

@@ -142,3 +142,368 @@ Dec 06 12:47:26,840  INFO XmlBeanDefinitionReader:317 - Loading XML bean definit
 Dec 06 12:47:27,412  INFO TestBaseUser:36 - BaseUser [id=0431f2bd-4536-4928-a57b-45523d42d74a, contact=pmk, email=pmk@test.com, phone=0102202005, password=88888888, enabled=false]
 Dec 06 12:47:27,419  INFO TestBaseUser:43 - BaseUser [id=0431f2bd-4536-4928-a57b-45523d42d74a, contact=pmk, email=pmk@test.com, phone=0102202005, password=88888888, enabled=true]
 Dec 06 12:47:27,419  INFO TestBaseUser:45 - Done
+Dec 06 14:05:23,415  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Thu Dec 06 14:05:23 MYT 2018]; root of context hierarchy
+Dec 06 14:05:23,444  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 06 14:05:23,523  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 06 14:05:24,074  INFO TestBaseUser:36 - BaseUser [id=0431f2bd-4536-4928-a57b-45523d42d74a, contact=pmk, email=pmk@test.com, phone=0102202005, password=88888888, enabled=true]
+Dec 06 14:05:24,080  INFO TestBaseUser:43 - BaseUser [id=0431f2bd-4536-4928-a57b-45523d42d74a, contact=pmk, email=pmk@test.com, phone=0102202005, password=88888888, enabled=true]
+Dec 06 14:05:24,080  INFO TestBaseUser:45 - Done
+Dec 06 14:05:34,612  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Thu Dec 06 14:05:34 MYT 2018]; root of context hierarchy
+Dec 06 14:05:34,645  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 06 14:05:34,732  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 06 14:05:35,164  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+Dec 06 14:05:35,195  INFO SQLErrorCodesFactory:126 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+Dec 06 14:05:35,201 ERROR PlateDaoImpl:61 - Could not execute : PreparedStatementCallback; bad SQL grammar [INSERT INTO plate (prefix,letter1,letter2,number1,number2,number3,number4,suffix,regNo,digit1,digit2,digit3,digit4,doubledigit,tripledigit,quaddigit,palindromix,paired,rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]; nested exception is org.postgresql.util.PSQLException: Can't infer the SQL type to use for an instance of org.plate.domain.plate.persistence.PlateDaoImpl$1. Use setObject() with an explicit Types value to specify the type to use.
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [INSERT INTO plate (prefix,letter1,letter2,number1,number2,number3,number4,suffix,regNo,digit1,digit2,digit3,digit4,doubledigit,tripledigit,quaddigit,palindromix,paired,rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]; nested exception is org.postgresql.util.PSQLException: Can't infer the SQL type to use for an instance of org.plate.domain.plate.persistence.PlateDaoImpl$1. Use setObject() with an explicit Types value to specify the type to use.
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:99)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:660)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:909)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:970)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:980)
+	at org.plate.domain.plate.persistence.PlateDaoImpl.store(PlateDaoImpl.java:32)
+	at org.plate.domain.plate.test.TestPlate.main(TestPlate.java:22)
+Caused by: org.postgresql.util.PSQLException: Can't infer the SQL type to use for an instance of org.plate.domain.plate.persistence.PlateDaoImpl$1. Use setObject() with an explicit Types value to specify the type to use.
+	at org.postgresql.jdbc.PgPreparedStatement.setObject(PgPreparedStatement.java:1039)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.setObject(DelegatingPreparedStatement.java:169)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.setObject(DelegatingPreparedStatement.java:169)
+	at org.springframework.jdbc.core.StatementCreatorUtils.setValue(StatementCreatorUtils.java:426)
+	at org.springframework.jdbc.core.StatementCreatorUtils.setParameterValueInternal(StatementCreatorUtils.java:235)
+	at org.springframework.jdbc.core.StatementCreatorUtils.setParameterValue(StatementCreatorUtils.java:166)
+	at org.springframework.jdbc.core.ArgumentPreparedStatementSetter.doSetValue(ArgumentPreparedStatementSetter.java:66)
+	at org.springframework.jdbc.core.ArgumentPreparedStatementSetter.setValues(ArgumentPreparedStatementSetter.java:47)
+	at org.springframework.jdbc.core.JdbcTemplate$2.doInPreparedStatement(JdbcTemplate.java:914)
+	at org.springframework.jdbc.core.JdbcTemplate$2.doInPreparedStatement(JdbcTemplate.java:909)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:644)
+	... 5 more
+Dec 06 14:06:57,659  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Thu Dec 06 14:06:57 MYT 2018]; root of context hierarchy
+Dec 06 14:06:57,691  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 06 14:06:57,769  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 06 14:06:58,235  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+Dec 06 14:06:58,266  INFO SQLErrorCodesFactory:126 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+Dec 06 14:06:58,272 ERROR PlateDaoImpl:61 - Could not execute : PreparedStatementCallback; bad SQL grammar [INSERT INTO plate (prefix,letter1,letter2,number1,number2,number3,number4,suffix,regNo,digit1,digit2,digit3,digit4,doubledigit,tripledigit,quaddigit,palindromix,paired,rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]; nested exception is org.postgresql.util.PSQLException: Can't infer the SQL type to use for an instance of org.plate.domain.plate.persistence.PlateDaoImpl$1. Use setObject() with an explicit Types value to specify the type to use.
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [INSERT INTO plate (prefix,letter1,letter2,number1,number2,number3,number4,suffix,regNo,digit1,digit2,digit3,digit4,doubledigit,tripledigit,quaddigit,palindromix,paired,rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]; nested exception is org.postgresql.util.PSQLException: Can't infer the SQL type to use for an instance of org.plate.domain.plate.persistence.PlateDaoImpl$1. Use setObject() with an explicit Types value to specify the type to use.
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:99)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:660)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:909)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:970)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:980)
+	at org.plate.domain.plate.persistence.PlateDaoImpl.store(PlateDaoImpl.java:32)
+	at org.plate.domain.plate.test.TestPlate.main(TestPlate.java:22)
+Caused by: org.postgresql.util.PSQLException: Can't infer the SQL type to use for an instance of org.plate.domain.plate.persistence.PlateDaoImpl$1. Use setObject() with an explicit Types value to specify the type to use.
+	at org.postgresql.jdbc.PgPreparedStatement.setObject(PgPreparedStatement.java:1039)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.setObject(DelegatingPreparedStatement.java:169)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.setObject(DelegatingPreparedStatement.java:169)
+	at org.springframework.jdbc.core.StatementCreatorUtils.setValue(StatementCreatorUtils.java:426)
+	at org.springframework.jdbc.core.StatementCreatorUtils.setParameterValueInternal(StatementCreatorUtils.java:235)
+	at org.springframework.jdbc.core.StatementCreatorUtils.setParameterValue(StatementCreatorUtils.java:166)
+	at org.springframework.jdbc.core.ArgumentPreparedStatementSetter.doSetValue(ArgumentPreparedStatementSetter.java:66)
+	at org.springframework.jdbc.core.ArgumentPreparedStatementSetter.setValues(ArgumentPreparedStatementSetter.java:47)
+	at org.springframework.jdbc.core.JdbcTemplate$2.doInPreparedStatement(JdbcTemplate.java:914)
+	at org.springframework.jdbc.core.JdbcTemplate$2.doInPreparedStatement(JdbcTemplate.java:909)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:644)
+	... 5 more
+Dec 06 14:09:23,953  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Thu Dec 06 14:09:23 MYT 2018]; root of context hierarchy
+Dec 06 14:09:23,983  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 06 14:09:24,063  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 06 14:09:24,196  INFO TestPlate:23 - Plate [id=0, prefix=W, letter1=U, letter2=Y, number1=9, number2=1, number3=1, number4=9, suffix=, regNo=WUY 9119, digit1=false, digit2=false, digit3=false, digit4=true, doubleDigit=false, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 06 14:09:24,519  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+Dec 06 14:09:24,548  INFO SQLErrorCodesFactory:126 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+Dec 06 14:09:24,555 ERROR PlateDaoImpl:61 - Could not execute : PreparedStatementCallback; bad SQL grammar [INSERT INTO plate (prefix,letter1,letter2,number1,number2,number3,number4,suffix,regNo,digit1,digit2,digit3,digit4,doubledigit,tripledigit,quaddigit,palindromix,paired,rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]; nested exception is org.postgresql.util.PSQLException: Can't infer the SQL type to use for an instance of org.plate.domain.plate.persistence.PlateDaoImpl$1. Use setObject() with an explicit Types value to specify the type to use.
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [INSERT INTO plate (prefix,letter1,letter2,number1,number2,number3,number4,suffix,regNo,digit1,digit2,digit3,digit4,doubledigit,tripledigit,quaddigit,palindromix,paired,rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]; nested exception is org.postgresql.util.PSQLException: Can't infer the SQL type to use for an instance of org.plate.domain.plate.persistence.PlateDaoImpl$1. Use setObject() with an explicit Types value to specify the type to use.
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:99)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:660)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:909)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:970)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:980)
+	at org.plate.domain.plate.persistence.PlateDaoImpl.store(PlateDaoImpl.java:32)
+	at org.plate.domain.plate.test.TestPlate.main(TestPlate.java:25)
+Caused by: org.postgresql.util.PSQLException: Can't infer the SQL type to use for an instance of org.plate.domain.plate.persistence.PlateDaoImpl$1. Use setObject() with an explicit Types value to specify the type to use.
+	at org.postgresql.jdbc.PgPreparedStatement.setObject(PgPreparedStatement.java:1039)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.setObject(DelegatingPreparedStatement.java:169)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.setObject(DelegatingPreparedStatement.java:169)
+	at org.springframework.jdbc.core.StatementCreatorUtils.setValue(StatementCreatorUtils.java:426)
+	at org.springframework.jdbc.core.StatementCreatorUtils.setParameterValueInternal(StatementCreatorUtils.java:235)
+	at org.springframework.jdbc.core.StatementCreatorUtils.setParameterValue(StatementCreatorUtils.java:166)
+	at org.springframework.jdbc.core.ArgumentPreparedStatementSetter.doSetValue(ArgumentPreparedStatementSetter.java:66)
+	at org.springframework.jdbc.core.ArgumentPreparedStatementSetter.setValues(ArgumentPreparedStatementSetter.java:47)
+	at org.springframework.jdbc.core.JdbcTemplate$2.doInPreparedStatement(JdbcTemplate.java:914)
+	at org.springframework.jdbc.core.JdbcTemplate$2.doInPreparedStatement(JdbcTemplate.java:909)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:644)
+	... 5 more
+Dec 06 14:11:25,652  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Thu Dec 06 14:11:25 MYT 2018]; root of context hierarchy
+Dec 06 14:11:25,682  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 06 14:11:25,763  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 06 14:11:25,889  INFO TestPlate:23 - Plate [id=0, prefix=W, letter1=U, letter2=Y, number1=9, number2=1, number3=1, number4=9, suffix=, regNo=WUY 9119, digit1=false, digit2=false, digit3=false, digit4=true, doubleDigit=false, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 06 14:11:26,213  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+Dec 06 14:11:26,242  INFO SQLErrorCodesFactory:126 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+Dec 06 14:11:26,249 ERROR PlateDaoImpl:61 - Could not execute : PreparedStatementCallback; bad SQL grammar [INSERT INTO plate (prefix,letter1,letter2,number1,number2,number3,number4,suffix,regNo,digit1,digit2,digit3,digit4,doubledigit,tripledigit,quaddigit,palindromix,paired,rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]; nested exception is org.postgresql.util.PSQLException: Can't infer the SQL type to use for an instance of org.plate.domain.plate.persistence.PlateDaoImpl$1. Use setObject() with an explicit Types value to specify the type to use.
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [INSERT INTO plate (prefix,letter1,letter2,number1,number2,number3,number4,suffix,regNo,digit1,digit2,digit3,digit4,doubledigit,tripledigit,quaddigit,palindromix,paired,rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]; nested exception is org.postgresql.util.PSQLException: Can't infer the SQL type to use for an instance of org.plate.domain.plate.persistence.PlateDaoImpl$1. Use setObject() with an explicit Types value to specify the type to use.
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:99)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:660)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:909)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:970)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:980)
+	at org.plate.domain.plate.persistence.PlateDaoImpl.store(PlateDaoImpl.java:32)
+	at org.plate.domain.plate.test.TestPlate.main(TestPlate.java:25)
+Caused by: org.postgresql.util.PSQLException: Can't infer the SQL type to use for an instance of org.plate.domain.plate.persistence.PlateDaoImpl$1. Use setObject() with an explicit Types value to specify the type to use.
+	at org.postgresql.jdbc.PgPreparedStatement.setObject(PgPreparedStatement.java:1039)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.setObject(DelegatingPreparedStatement.java:169)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.setObject(DelegatingPreparedStatement.java:169)
+	at org.springframework.jdbc.core.StatementCreatorUtils.setValue(StatementCreatorUtils.java:426)
+	at org.springframework.jdbc.core.StatementCreatorUtils.setParameterValueInternal(StatementCreatorUtils.java:235)
+	at org.springframework.jdbc.core.StatementCreatorUtils.setParameterValue(StatementCreatorUtils.java:166)
+	at org.springframework.jdbc.core.ArgumentPreparedStatementSetter.doSetValue(ArgumentPreparedStatementSetter.java:66)
+	at org.springframework.jdbc.core.ArgumentPreparedStatementSetter.setValues(ArgumentPreparedStatementSetter.java:47)
+	at org.springframework.jdbc.core.JdbcTemplate$2.doInPreparedStatement(JdbcTemplate.java:914)
+	at org.springframework.jdbc.core.JdbcTemplate$2.doInPreparedStatement(JdbcTemplate.java:909)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:644)
+	... 5 more
+Dec 06 14:16:22,196  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Thu Dec 06 14:16:22 MYT 2018]; root of context hierarchy
+Dec 06 14:16:22,227  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 06 14:16:22,307  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 06 14:16:22,417  INFO TestPlate:23 - Plate [id=0, prefix=W, letter1=U, letter2=Y, number1=9, number2=1, number3=1, number4=9, suffix=, regNo=WUY 9119, digit1=false, digit2=false, digit3=false, digit4=true, doubleDigit=false, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 06 14:16:22,744  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+Dec 06 14:16:22,774  INFO SQLErrorCodesFactory:126 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+Dec 06 14:16:22,780 ERROR PlateDaoImpl:62 - Could not execute : PreparedStatementCallback; bad SQL grammar [INSERT INTO plate (prefix,letter1,letter2,number1,number2,number3,number4,suffix,regNo,digit1,digit2,digit3,digit4,doubledigit,tripledigit,quaddigit,palindromix,paired,rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]; nested exception is org.postgresql.util.PSQLException: ERROR: column "palindromix" of relation "plate" does not exist
+  Position: 150
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [INSERT INTO plate (prefix,letter1,letter2,number1,number2,number3,number4,suffix,regNo,digit1,digit2,digit3,digit4,doubledigit,tripledigit,quaddigit,palindromix,paired,rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]; nested exception is org.postgresql.util.PSQLException: ERROR: column "palindromix" of relation "plate" does not exist
+  Position: 150
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:99)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:660)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:909)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:970)
+	at org.plate.domain.plate.persistence.PlateDaoImpl.store(PlateDaoImpl.java:32)
+	at org.plate.domain.plate.test.TestPlate.main(TestPlate.java:25)
+Caused by: org.postgresql.util.PSQLException: ERROR: column "palindromix" of relation "plate" does not exist
+  Position: 150
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2003)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:200)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:424)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:161)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:133)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:105)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:105)
+	at org.springframework.jdbc.core.JdbcTemplate$2.doInPreparedStatement(JdbcTemplate.java:916)
+	at org.springframework.jdbc.core.JdbcTemplate$2.doInPreparedStatement(JdbcTemplate.java:909)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:644)
+	... 4 more
+Dec 06 14:17:07,338  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Thu Dec 06 14:17:07 MYT 2018]; root of context hierarchy
+Dec 06 14:17:07,367  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 06 14:17:07,450  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 06 14:17:07,603  INFO TestPlate:23 - Plate [id=0, prefix=W, letter1=U, letter2=Y, number1=9, number2=1, number3=1, number4=9, suffix=, regNo=WUY 9119, digit1=false, digit2=false, digit3=false, digit4=true, doubleDigit=false, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 06 14:17:08,001  INFO TestPlate:29 - 
+Dec 06 14:17:08,001  INFO TestPlate:31 - Done
+Dec 06 14:18:36,897  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Thu Dec 06 14:18:36 MYT 2018]; root of context hierarchy
+Dec 06 14:18:36,928  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 06 14:18:37,008  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 06 14:18:37,151  INFO TestPlate:23 - Plate [id=0, prefix=W, letter1=U, letter2=Y, number1=9, number2=1, number3=1, number4=9, suffix=, regNo=WUY 9119, digit1=false, digit2=false, digit3=false, digit4=true, doubleDigit=false, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 06 14:19:04,407  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Thu Dec 06 14:19:04 MYT 2018]; root of context hierarchy
+Dec 06 14:19:04,437  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 06 14:19:04,519  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 06 14:19:04,644  INFO TestPlate:23 - Plate [id=0, prefix=W, letter1=U, letter2=Y, number1=9, number2=1, number3=1, number4=9, suffix=, regNo=WUY 9119, digit1=false, digit2=false, digit3=false, digit4=true, doubleDigit=false, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 06 14:19:04,971  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+Dec 06 14:19:05,000  INFO SQLErrorCodesFactory:126 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+Dec 06 14:19:05,007 ERROR PlateDaoImpl:61 - Could not execute : PreparedStatementCallback; bad SQL grammar [INSERT INTO plate (prefix,letter1,letter2,number1,number2,number3,number4,suffix,regNo,digit1,digit2,digit3,digit4,doubledigit,tripledigit,quaddigit,palindromic,paired,rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]; nested exception is org.postgresql.util.PSQLException: Can't infer the SQL type to use for an instance of org.plate.domain.plate.persistence.PlateDaoImpl$1. Use setObject() with an explicit Types value to specify the type to use.
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [INSERT INTO plate (prefix,letter1,letter2,number1,number2,number3,number4,suffix,regNo,digit1,digit2,digit3,digit4,doubledigit,tripledigit,quaddigit,palindromic,paired,rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]; nested exception is org.postgresql.util.PSQLException: Can't infer the SQL type to use for an instance of org.plate.domain.plate.persistence.PlateDaoImpl$1. Use setObject() with an explicit Types value to specify the type to use.
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:99)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:660)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:909)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:970)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:980)
+	at org.plate.domain.plate.persistence.PlateDaoImpl.store(PlateDaoImpl.java:32)
+	at org.plate.domain.plate.test.TestPlate.main(TestPlate.java:25)
+Caused by: org.postgresql.util.PSQLException: Can't infer the SQL type to use for an instance of org.plate.domain.plate.persistence.PlateDaoImpl$1. Use setObject() with an explicit Types value to specify the type to use.
+	at org.postgresql.jdbc.PgPreparedStatement.setObject(PgPreparedStatement.java:1039)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.setObject(DelegatingPreparedStatement.java:169)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.setObject(DelegatingPreparedStatement.java:169)
+	at org.springframework.jdbc.core.StatementCreatorUtils.setValue(StatementCreatorUtils.java:426)
+	at org.springframework.jdbc.core.StatementCreatorUtils.setParameterValueInternal(StatementCreatorUtils.java:235)
+	at org.springframework.jdbc.core.StatementCreatorUtils.setParameterValue(StatementCreatorUtils.java:166)
+	at org.springframework.jdbc.core.ArgumentPreparedStatementSetter.doSetValue(ArgumentPreparedStatementSetter.java:66)
+	at org.springframework.jdbc.core.ArgumentPreparedStatementSetter.setValues(ArgumentPreparedStatementSetter.java:47)
+	at org.springframework.jdbc.core.JdbcTemplate$2.doInPreparedStatement(JdbcTemplate.java:914)
+	at org.springframework.jdbc.core.JdbcTemplate$2.doInPreparedStatement(JdbcTemplate.java:909)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:644)
+	... 5 more
+Dec 06 14:19:53,039  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Thu Dec 06 14:19:53 MYT 2018]; root of context hierarchy
+Dec 06 14:19:53,071  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 06 14:19:53,153  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 06 14:19:53,289  INFO TestPlate:23 - Plate [id=0, prefix=W, letter1=U, letter2=Y, number1=9, number2=1, number3=1, number4=9, suffix=, regNo=WUY 9119, digit1=false, digit2=false, digit3=false, digit4=true, doubleDigit=false, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 06 14:19:53,684  INFO TestPlate:29 - 
+Dec 06 14:19:53,684  INFO TestPlate:31 - Done
+Dec 06 14:20:48,770  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Thu Dec 06 14:20:48 MYT 2018]; root of context hierarchy
+Dec 06 14:20:48,800  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 06 14:20:48,881  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 06 14:20:49,013  INFO TestPlate:23 - Plate [id=0, prefix=W, letter1=U, letter2=Y, number1=9, number2=1, number3=1, number4=9, suffix=, regNo=WUY 9119, digit1=false, digit2=false, digit3=false, digit4=true, doubleDigit=false, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 06 14:20:49,414  INFO TestPlate:29 - Plate [id=4, prefix=W  , letter1=U, letter2=Y, number1=9, number2=1, number3=1, number4=9, suffix=   , regNo=WUY 9119, digit1=false, digit2=false, digit3=false, digit4=true, doubleDigit=false, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 06 14:20:49,414  INFO TestPlate:31 - Done
+Dec 06 14:23:07,507  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Thu Dec 06 14:23:07 MYT 2018]; root of context hierarchy
+Dec 06 14:23:07,540  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 06 14:23:07,620  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 06 14:23:07,767  INFO TestPlate:23 - Plate [id=0, prefix=W, letter1=U, letter2=Y, number1=9, number2=1, number3=1, number4=9, suffix=, regNo=WUY 9119, digit1=false, digit2=false, digit3=false, digit4=true, doubleDigit=false, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 06 14:23:08,090  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+Dec 06 14:23:08,120  INFO SQLErrorCodesFactory:126 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+Dec 06 14:23:08,127 ERROR PlateDaoImpl:61 - Could not execute : PreparedStatementCallback; bad SQL grammar [INSERT INTO plate (prefix,letter1,letter2,number1,number2,number3,number4,suffix,regNo,digit1,digit2,digit3,digit4,doubledigit,tripledigit,quaddigit,palindromic,paired,rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]; nested exception is org.postgresql.util.PSQLException: Can't infer the SQL type to use for an instance of [Ljava.lang.String;. Use setObject() with an explicit Types value to specify the type to use.
+org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [INSERT INTO plate (prefix,letter1,letter2,number1,number2,number3,number4,suffix,regNo,digit1,digit2,digit3,digit4,doubledigit,tripledigit,quaddigit,palindromic,paired,rating) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]; nested exception is org.postgresql.util.PSQLException: Can't infer the SQL type to use for an instance of [Ljava.lang.String;. Use setObject() with an explicit Types value to specify the type to use.
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:99)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:660)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:909)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:970)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:980)
+	at org.plate.domain.plate.persistence.PlateDaoImpl.store(PlateDaoImpl.java:32)
+	at org.plate.domain.plate.test.TestPlate.main(TestPlate.java:25)
+Caused by: org.postgresql.util.PSQLException: Can't infer the SQL type to use for an instance of [Ljava.lang.String;. Use setObject() with an explicit Types value to specify the type to use.
+	at org.postgresql.jdbc.PgPreparedStatement.setObject(PgPreparedStatement.java:1039)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.setObject(DelegatingPreparedStatement.java:169)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.setObject(DelegatingPreparedStatement.java:169)
+	at org.springframework.jdbc.core.StatementCreatorUtils.setValue(StatementCreatorUtils.java:426)
+	at org.springframework.jdbc.core.StatementCreatorUtils.setParameterValueInternal(StatementCreatorUtils.java:235)
+	at org.springframework.jdbc.core.StatementCreatorUtils.setParameterValue(StatementCreatorUtils.java:166)
+	at org.springframework.jdbc.core.ArgumentPreparedStatementSetter.doSetValue(ArgumentPreparedStatementSetter.java:66)
+	at org.springframework.jdbc.core.ArgumentPreparedStatementSetter.setValues(ArgumentPreparedStatementSetter.java:47)
+	at org.springframework.jdbc.core.JdbcTemplate$2.doInPreparedStatement(JdbcTemplate.java:914)
+	at org.springframework.jdbc.core.JdbcTemplate$2.doInPreparedStatement(JdbcTemplate.java:909)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:644)
+	... 5 more
+Dec 06 14:29:12,952  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Thu Dec 06 14:29:12 MYT 2018]; root of context hierarchy
+Dec 06 14:29:12,983  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 06 14:29:13,058  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 06 14:29:13,193  INFO TestPlate:23 - Plate [id=0, prefix=W, letter1=U, letter2=Y, number1=9, number2=1, number3=1, number4=9, suffix=, regNo=WUY 9119, digit1=false, digit2=false, digit3=false, digit4=true, doubleDigit=false, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 06 14:29:13,597  INFO TestPlate:29 - Plate [id=5, prefix=W  , letter1=U, letter2=Y, number1=9, number2=1, number3=1, number4=9, suffix=   , regNo=WUY 9119, digit1=false, digit2=false, digit3=false, digit4=true, doubleDigit=false, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 06 14:29:13,598  INFO TestPlate:31 - Done
+Dec 06 14:38:06,264  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Thu Dec 06 14:38:06 MYT 2018]; root of context hierarchy
+Dec 06 14:38:06,295  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 06 14:38:06,374  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 06 14:38:06,503  INFO TestPlate:23 - Plate [id=0, prefix=W, letter1=U, letter2=Y, number1=9, number2=1, number3=1, number4=9, suffix=, regNo=WUY 9119, digit1=false, digit2=false, digit3=false, digit4=true, doubleDigit=false, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 06 14:38:06,830  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+Dec 06 14:38:06,860  INFO SQLErrorCodesFactory:126 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+Dec 06 14:38:06,867 ERROR PlateDaoImpl:69 - Could not execute : PreparedStatementCallback; SQL []; No value specified for parameter 20.; nested exception is org.postgresql.util.PSQLException: No value specified for parameter 20.
+org.springframework.dao.DataIntegrityViolationException: PreparedStatementCallback; SQL []; No value specified for parameter 20.; nested exception is org.postgresql.util.PSQLException: No value specified for parameter 20.
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:102)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:660)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:943)
+	at org.plate.domain.plate.persistence.PlateDaoImpl.store(PlateDaoImpl.java:35)
+	at org.plate.domain.plate.test.TestPlate.main(TestPlate.java:25)
+Caused by: org.postgresql.util.PSQLException: No value specified for parameter 20.
+	at org.postgresql.core.v3.SimpleParameterList.checkAllParametersSet(SimpleParameterList.java:225)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:190)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:424)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:161)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:133)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:105)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.executeUpdate(DelegatingPreparedStatement.java:105)
+	at org.springframework.jdbc.core.JdbcTemplate$3.doInPreparedStatement(JdbcTemplate.java:946)
+	at org.springframework.jdbc.core.JdbcTemplate$3.doInPreparedStatement(JdbcTemplate.java:943)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:644)
+	... 3 more
+Dec 06 14:39:06,985  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Thu Dec 06 14:39:06 MYT 2018]; root of context hierarchy
+Dec 06 14:39:07,016  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 06 14:39:07,095  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 06 14:39:07,295  INFO PlateParseRule:21 - Parsing : W MH 2 55000
+Dec 06 14:39:07,302  INFO PlateImporter:35 - WMH 2 - 55000.0
+Dec 06 14:39:07,303  INFO PlateParseRule:21 - Parsing : A GB 7 40000
+Dec 06 14:39:07,304  INFO PlateImporter:35 - AGB 7 - 40000.0
+Dec 06 14:39:07,304  INFO PlateParseRule:21 - Parsing : K BT 7 45000
+Dec 06 14:39:07,305  INFO PlateImporter:35 - KBT 7 - 45000.0
+Dec 06 14:39:07,305  INFO PlateParseRule:21 - Parsing : W HR 9 70000
+Dec 06 14:39:07,306  INFO PlateImporter:35 - WHR 9 - 70000.0
+Dec 06 14:39:07,306  INFO PlateParseRule:21 - Parsing : P FR 9 60000
+Dec 06 14:39:07,307  INFO PlateImporter:35 - PFR 9 - 60000.0
+Dec 06 14:39:07,308  INFO PlateParseRule:21 - Parsing : P EN 9 90000
+Dec 06 14:39:07,308  INFO PlateImporter:35 - PEN 9 - 90000.0
+Dec 06 14:39:07,309  INFO PlateParseRule:21 - Parsing : W E 88 120000
+Dec 06 14:39:07,312  INFO PlateImporter:35 - WE 88 - 120000.0
+Dec 06 14:39:07,313  INFO PlateParseRule:21 - Parsing : W X 88 100000
+Dec 06 14:39:07,313  INFO PlateImporter:35 - WX 88 - 100000.0
+Dec 06 14:39:07,314  INFO PlateParseRule:21 - Parsing : P FC 11 22000
+Dec 06 14:39:07,315  INFO PlateImporter:35 - PFC 11 - 22000.0
+Dec 06 14:39:07,315  INFO PlateParseRule:21 - Parsing : W W 54 25000
+Dec 06 14:39:07,316  INFO PlateImporter:35 - WW 54 - 25000.0
+Dec 06 14:39:07,316  INFO PlateParseRule:21 - Parsing : P ML 55 15000
+Dec 06 14:39:07,317  INFO PlateImporter:35 - PML 55 - 15000.0
+Dec 06 14:39:07,318  INFO PlateParseRule:21 - Parsing : P ME 63 5500
+Dec 06 14:39:07,319  INFO PlateImporter:35 - PME 63 - 5500.0
+Dec 06 14:39:07,319  INFO PlateParseRule:21 - Parsing : P KR 66 13000
+Dec 06 14:39:07,320  INFO PlateImporter:35 - PKR 66 - 13000.0
+Dec 06 14:39:07,321  INFO PlateParseRule:21 - Parsing : P LA 66 13000
+Dec 06 14:39:07,322  INFO PlateImporter:35 - PLA 66 - 13000.0
+Dec 06 14:39:07,323  INFO PlateParseRule:21 - Parsing : P LP 66 15000
+Dec 06 14:39:07,323  INFO PlateImporter:35 - PLP 66 - 15000.0
+Dec 06 14:39:07,324  INFO PlateParseRule:21 - Parsing : P HF 68 6000
+Dec 06 14:39:07,325  INFO PlateImporter:35 - PHF 68 - 6000.0
+Dec 06 14:39:07,326  INFO PlateParseRule:21 - Parsing : P LA 98 6000
+Dec 06 14:39:07,327  INFO PlateImporter:35 - PLA 98 - 6000.0
+Dec 06 14:39:07,327  INFO PlateParseRule:21 - Parsing : W HF 999 15000
+Dec 06 14:39:07,328  INFO PlateImporter:35 - WHF 999 - 15000.0
+Dec 06 14:39:07,329  INFO PlateParseRule:21 - Parsing : P AB 999 18000
+Dec 06 14:39:07,330  INFO PlateImporter:35 - PAB 999 - 18000.0
+Dec 06 14:39:07,330  INFO PlateImporter:44 - 19 plates imported for : /home/pmk/repo/JPJ/support/premium/0307116.txt
+Dec 06 14:39:07,331  INFO PlateImporter:59 -  file successfully imported
+Dec 06 14:40:23,679  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Thu Dec 06 14:40:23 MYT 2018]; root of context hierarchy
+Dec 06 14:40:23,711  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 06 14:40:23,790  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 06 14:40:23,927  INFO PlateParseRule:21 - Parsing : W MH 2 55000
+Dec 06 14:40:24,307  INFO PlateImporter:35 - WMH 2 - 55000.0
+Dec 06 14:40:24,308  INFO PlateParseRule:21 - Parsing : A GB 7 40000
+Dec 06 14:40:24,313  INFO PlateImporter:35 - AGB 7 - 40000.0
+Dec 06 14:40:24,313  INFO PlateParseRule:21 - Parsing : K BT 7 45000
+Dec 06 14:40:24,324  INFO PlateImporter:35 - KBT 7 - 45000.0
+Dec 06 14:40:24,324  INFO PlateParseRule:21 - Parsing : W HR 9 70000
+Dec 06 14:40:24,335  INFO PlateImporter:35 - WHR 9 - 70000.0
+Dec 06 14:40:24,335  INFO PlateParseRule:21 - Parsing : P FR 9 60000
+Dec 06 14:40:24,346  INFO PlateImporter:35 - PFR 9 - 60000.0
+Dec 06 14:40:24,346  INFO PlateParseRule:21 - Parsing : P EN 9 90000
+Dec 06 14:40:24,357  INFO PlateImporter:35 - PEN 9 - 90000.0
+Dec 06 14:40:24,358  INFO PlateParseRule:21 - Parsing : W E 88 120000
+Dec 06 14:40:24,368  INFO PlateImporter:35 - WE 88 - 120000.0
+Dec 06 14:40:24,369  INFO PlateParseRule:21 - Parsing : W X 88 100000
+Dec 06 14:40:24,380  INFO PlateImporter:35 - WX 88 - 100000.0
+Dec 06 14:40:24,380  INFO PlateParseRule:21 - Parsing : P FC 11 22000
+Dec 06 14:40:24,391  INFO PlateImporter:35 - PFC 11 - 22000.0
+Dec 06 14:40:24,391  INFO PlateParseRule:21 - Parsing : W W 54 25000
+Dec 06 14:40:24,402  INFO PlateImporter:35 - WW 54 - 25000.0
+Dec 06 14:40:24,402  INFO PlateParseRule:21 - Parsing : P ML 55 15000
+Dec 06 14:40:24,413  INFO PlateImporter:35 - PML 55 - 15000.0
+Dec 06 14:40:24,413  INFO PlateParseRule:21 - Parsing : P ME 63 5500
+Dec 06 14:40:24,424  INFO PlateImporter:35 - PME 63 - 5500.0
+Dec 06 14:40:24,425  INFO PlateParseRule:21 - Parsing : P KR 66 13000
+Dec 06 14:40:24,435  INFO PlateImporter:35 - PKR 66 - 13000.0
+Dec 06 14:40:24,436  INFO PlateParseRule:21 - Parsing : P LA 66 13000
+Dec 06 14:40:24,447  INFO PlateImporter:35 - PLA 66 - 13000.0
+Dec 06 14:40:24,447  INFO PlateParseRule:21 - Parsing : P LP 66 15000
+Dec 06 14:40:24,458  INFO PlateImporter:35 - PLP 66 - 15000.0
+Dec 06 14:40:24,458  INFO PlateParseRule:21 - Parsing : P HF 68 6000
+Dec 06 14:40:24,469  INFO PlateImporter:35 - PHF 68 - 6000.0
+Dec 06 14:40:24,469  INFO PlateParseRule:21 - Parsing : P LA 98 6000
+Dec 06 14:40:24,480  INFO PlateImporter:35 - PLA 98 - 6000.0
+Dec 06 14:40:24,480  INFO PlateParseRule:21 - Parsing : W HF 999 15000
+Dec 06 14:40:24,491  INFO PlateImporter:35 - WHF 999 - 15000.0
+Dec 06 14:40:24,491  INFO PlateParseRule:21 - Parsing : P AB 999 18000
+Dec 06 14:40:24,502  INFO PlateImporter:35 - PAB 999 - 18000.0
+Dec 06 14:40:24,502  INFO PlateImporter:44 - 19 plates imported for : /home/pmk/repo/JPJ/support/premium/0307116.txt
+Dec 06 14:40:24,502  INFO PlateImporter:59 -  file successfully imported

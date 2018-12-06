@@ -32,19 +32,10 @@ public class Plate implements Serializable{
 	private Boolean palindromic;
 	private Boolean paired;
 	private int rating;
+	private double listPrice;
 	
 	public Plate()
 	{
-		super();
-		setDigit1(false);
-		setDigit2(false);
-		setDigit3(false);
-		setDigit4(false);
-		setDoubleDigit(false);
-		setPaired(false);
-		setPalindromic(false);
-		setQuadDigit(false);
-		setTripleDigit(false);
 	}
 
 	public int getRating() {
@@ -299,20 +290,28 @@ public class Plate implements Serializable{
 		paired = digit4 && number1.equals(number3) && number2.equals(number4);
 	}
 	
-	
-	@Override
-	public String toString() {
-		return "Plate [prefix=" + prefix + ", letter1=" + letter1 + ", letter2=" + letter2 + ", number1=" + number1
-				+ ", number2=" + number2 + ", number3=" + number3 + ", number4=" + number4 + ", suffix=" + suffix
-				+ ", regNo=" + regNo + ", digit1=" + digit1 + ", digit2=" + digit2 + ", digit3=" + digit3 + ", digit4="
-				+ digit4 + ", doubleDigit=" + doubleDigit + ", tripleDigit=" + tripleDigit + ", quadDigit=" + quadDigit
-				+ ", palindromic=" + palindromic + ", paired=" + paired + "]";
-	}
-
 	public String getSpecials() {
 		return "digit1=" + digit1 + ", digit2=" + digit2 + ", digit3=" + digit3 + ", digit4="
 				+ digit4 + ", doubleDigit=" + doubleDigit + ", tripleDigit=" + tripleDigit + ", quadDigit=" + quadDigit
 				+ ", palindromic=" + palindromic + ", paired=" + paired + "]";
+	}
+
+	@Override
+	public String toString() {
+		return "Plate [id=" + id + ", prefix=" + prefix + ", letter1=" + letter1 + ", letter2=" + letter2 + ", number1="
+				+ number1 + ", number2=" + number2 + ", number3=" + number3 + ", number4=" + number4 + ", suffix="
+				+ suffix + ", regNo=" + regNo + ", digit1=" + digit1 + ", digit2=" + digit2 + ", digit3=" + digit3
+				+ ", digit4=" + digit4 + ", doubleDigit=" + doubleDigit + ", tripleDigit=" + tripleDigit
+				+ ", quadDigit=" + quadDigit + ", palindromic=" + palindromic + ", paired=" + paired + ", rating="
+				+ rating + "]";
+	}
+
+	public double getListPrice() {
+		return listPrice;
+	}
+
+	public void setListPrice(double listPrice) {
+		this.listPrice = listPrice;
 	}
 
 }
