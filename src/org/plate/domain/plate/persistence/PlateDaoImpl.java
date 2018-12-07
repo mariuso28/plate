@@ -93,7 +93,7 @@ public class PlateDaoImpl extends NamedParameterJdbcDaoSupport implements PlateD
 	}
 
 	@Override
-	public Plate getById(long id) throws PersistenceRuntimeException {
+	public Plate getById(final long id) throws PersistenceRuntimeException {
 		try
 		{
 			final String sql = "SELECT * FROM plate WHERE id=?";

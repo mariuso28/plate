@@ -507,3 +507,117 @@ Dec 06 14:40:24,491  INFO PlateParseRule:21 - Parsing : P AB 999 18000
 Dec 06 14:40:24,502  INFO PlateImporter:35 - PAB 999 - 18000.0
 Dec 06 14:40:24,502  INFO PlateImporter:44 - 19 plates imported for : /home/pmk/repo/JPJ/support/premium/0307116.txt
 Dec 06 14:40:24,502  INFO PlateImporter:59 -  file successfully imported
+Dec 07 10:28:54,930  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Fri Dec 07 10:28:54 MYT 2018]; root of context hierarchy
+Dec 07 10:28:54,979  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 07 10:28:55,100  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 07 10:28:55,310  INFO QueryDaoImpl:27 - Performing QueryOnPlate with : QueryOnPlateParams [prefix=P, letter1=N, letter2=null, number1=9, number2=null, number3=null, number4=null, suffix=null]
+Dec 07 10:29:58,860  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Fri Dec 07 10:29:58 MYT 2018]; root of context hierarchy
+Dec 07 10:29:58,889  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 07 10:29:58,971  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 07 10:29:59,095  INFO QueryDaoImpl:27 - Performing QueryOnPlate with : QueryOnPlateParams [prefix=P, letter1=N, letter2=null, number1=9, number2=null, number3=null, number4=null, suffix=null]
+Dec 07 10:31:00,501  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Fri Dec 07 10:31:00 MYT 2018]; root of context hierarchy
+Dec 07 10:31:00,541  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 07 10:31:00,629  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 07 10:31:00,753  INFO QueryDaoImpl:27 - Performing QueryOnPlate with : QueryOnPlateParams [prefix=P, letter1=E, letter2=N, number1=9, number2=null, number3=null, number4=null, suffix=null]
+Dec 07 10:31:56,807  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Fri Dec 07 10:31:56 MYT 2018]; root of context hierarchy
+Dec 07 10:31:56,837  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 07 10:31:56,920  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 07 10:31:57,055  INFO QueryDaoImpl:27 - Performing QueryOnPlate with : QueryOnPlateParams [prefix=P, letter1=E, letter2=N, number1=9, number2=null, number3=null, number4=null, suffix=null]
+Dec 07 10:32:21,432  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Fri Dec 07 10:32:21 MYT 2018]; root of context hierarchy
+Dec 07 10:32:21,462  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 07 10:32:21,543  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 07 10:32:21,670  INFO QueryDaoImpl:27 - Performing QueryOnPlate with : QueryOnPlateParams [prefix=P, letter1=E, letter2=N, number1=9, number2=null, number3=null, number4=null, suffix=null]
+Dec 07 10:32:21,670  INFO QueryDaoImpl:33 - SQL : SELECT * FROM plate WHERE prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' 
+Dec 07 10:32:22,037  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+Dec 07 10:32:22,067  INFO SQLErrorCodesFactory:126 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+Dec 07 10:32:22,073 ERROR QueryDaoImpl:42 - Could not execute : StatementCallback; bad SQL grammar [SELECT * FROM plate WHERE prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' ]; nested exception is org.postgresql.util.PSQLException: ERROR: syntax error at or near "prefix"
+  Position: 69
+org.springframework.jdbc.BadSqlGrammarException: StatementCallback; bad SQL grammar [SELECT * FROM plate WHERE prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' prefix'P'  AND letter1'E'  AND letter2'N' prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' ]; nested exception is org.postgresql.util.PSQLException: ERROR: syntax error at or near "prefix"
+  Position: 69
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:231)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:416)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:471)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:481)
+	at org.plate.query.persistence.QueryDaoImpl.QueryOnPlate(QueryDaoImpl.java:36)
+	at org.plate.query.test.QueryTestPlate.main(QueryTestPlate.java:34)
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "prefix"
+  Position: 69
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2003)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:200)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:424)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:321)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:284)
+	at org.apache.commons.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.apache.commons.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:455)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:405)
+	... 4 more
+Dec 07 10:33:44,043  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Fri Dec 07 10:33:44 MYT 2018]; root of context hierarchy
+Dec 07 10:33:44,074  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 07 10:33:44,155  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 07 10:33:44,296  INFO QueryDaoImpl:27 - Performing QueryOnPlate with : QueryOnPlateParams [prefix=P, letter1=E, letter2=N, number1=9, number2=null, number3=null, number4=null, suffix=null]
+Dec 07 10:33:44,297  INFO QueryDaoImpl:33 - SQL : SELECT * FROM plate WHERE prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' 
+Dec 07 10:33:44,611  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+Dec 07 10:33:44,642  INFO SQLErrorCodesFactory:126 - SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+Dec 07 10:33:44,649 ERROR QueryDaoImpl:42 - Could not execute : StatementCallback; bad SQL grammar [SELECT * FROM plate WHERE prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' ]; nested exception is org.postgresql.util.PSQLException: ERROR: type "prefix" does not exist
+  Position: 27
+org.springframework.jdbc.BadSqlGrammarException: StatementCallback; bad SQL grammar [SELECT * FROM plate WHERE prefix'P'  AND letter1'E'  AND letter2'N'  AND number1'9' ]; nested exception is org.postgresql.util.PSQLException: ERROR: type "prefix" does not exist
+  Position: 27
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:99)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:73)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:416)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:471)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:481)
+	at org.plate.query.persistence.QueryDaoImpl.QueryOnPlate(QueryDaoImpl.java:36)
+	at org.plate.query.test.QueryTestPlate.main(QueryTestPlate.java:34)
+Caused by: org.postgresql.util.PSQLException: ERROR: type "prefix" does not exist
+  Position: 27
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2284)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2003)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:200)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:424)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:321)
+	at org.postgresql.jdbc.PgStatement.executeQuery(PgStatement.java:284)
+	at org.apache.commons.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.apache.commons.dbcp.DelegatingStatement.executeQuery(DelegatingStatement.java:208)
+	at org.springframework.jdbc.core.JdbcTemplate$1QueryStatementCallback.doInStatement(JdbcTemplate.java:455)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:405)
+	... 4 more
+Dec 07 10:34:46,451  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Fri Dec 07 10:34:46 MYT 2018]; root of context hierarchy
+Dec 07 10:34:46,481  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 07 10:34:46,561  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 07 10:34:46,686  INFO QueryDaoImpl:27 - Performing QueryOnPlate with : QueryOnPlateParams [prefix=P, letter1=E, letter2=N, number1=9, number2=null, number3=null, number4=null, suffix=null]
+Dec 07 10:34:46,686  INFO QueryDaoImpl:33 - SQL : SELECT * FROM plate WHERE prefix = 'P'  AND letter1 = 'E'  AND letter2 = 'N'  AND number1 = '9' 
+Dec 07 10:34:47,019  INFO QueryTestPlate:36 - Plate [id=11, prefix=P  , letter1=E, letter2=N, number1=9, number2= , number3= , number4= , suffix=   , regNo=PEN 9, digit1=true, digit2=false, digit3=false, digit4=false, doubleDigit=false, tripleDigit=false, quadDigit=false, palindromic=false, paired=false, rating=0]
+Dec 07 10:38:08,025  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Fri Dec 07 10:38:08 MYT 2018]; root of context hierarchy
+Dec 07 10:38:08,058  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 07 10:38:08,139  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 07 10:38:08,271  INFO QueryDaoImpl:27 - Performing QueryOnPlate with : QueryOnPlateParams [prefix=P, letter1=E, letter2=N, number1=9, number2=null, number3=null, number4=null, suffix=null]
+Dec 07 10:38:08,271  INFO QueryDaoImpl:33 - SQL : SELECT * FROM plate WHERE prefix = 'P'  AND letter1 = 'E'  AND letter2 = 'N'  AND number1 = '9' 
+Dec 07 10:38:08,593  INFO QueryTestPlate:36 - Plate [id=11, prefix=P  , letter1=E, letter2=N, number1=9, number2= , number3= , number4= , suffix=   , regNo=PEN 9, digit1=true, digit2=false, digit3=false, digit4=false, doubleDigit=false, tripleDigit=false, quadDigit=false, palindromic=false, paired=false, rating=0]
+Dec 07 10:38:52,851  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Fri Dec 07 10:38:52 MYT 2018]; root of context hierarchy
+Dec 07 10:38:52,881  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 07 10:38:52,963  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 07 10:38:53,099  INFO QueryDaoImpl:70 - Performing QueryOnDigits with : QueryOnDigitsParams [doubleDigit=true, tripleDigit=null, quadDigit=null, palindromic=null, paired=null]
+Dec 07 10:41:47,874  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Fri Dec 07 10:41:47 MYT 2018]; root of context hierarchy
+Dec 07 10:41:47,907  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 07 10:41:47,987  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 07 10:41:48,115  INFO QueryDaoImpl:70 - Performing QueryOnDigits with : QueryOnDigitsParams [doubleDigit=true, tripleDigit=null, quadDigit=null, palindromic=null, paired=null]
+Dec 07 10:41:48,115  INFO QueryDaoImpl:74 - SQL : SELECT * FROM plate WHERE  doubledigit= TRUE  AND tripledigit= FALSE  AND quaddigit= FALSE  AND paired= FALSE  AND palindromic= FALSE 
+Dec 07 10:43:23,569  INFO ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Fri Dec 07 10:43:23 MYT 2018]; root of context hierarchy
+Dec 07 10:43:23,603  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-service.xml]
+Dec 07 10:43:23,699  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [plate-persistence.xml]
+Dec 07 10:43:23,851  INFO QueryDaoImpl:70 - Performing QueryOnDigits with : QueryOnDigitsParams [doubleDigit=true, tripleDigit=null, quadDigit=null, palindromic=true, paired=null]
+Dec 07 10:43:23,852  INFO QueryDaoImpl:74 - SQL : SELECT * FROM plate WHERE  doubledigit= TRUE  AND tripledigit= FALSE  AND quaddigit= FALSE  AND paired= FALSE  AND palindromic= TRUE 
+Dec 07 10:43:24,180  INFO QueryTestDigits:33 - Plate [id=12, prefix=W  , letter1=E, letter2= , number1=8, number2=8, number3= , number4= , suffix=   , regNo=WE 88, digit1=false, digit2=true, digit3=false, digit4=false, doubleDigit=true, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 07 10:43:24,181  INFO QueryTestDigits:33 - Plate [id=13, prefix=W  , letter1=X, letter2= , number1=8, number2=8, number3= , number4= , suffix=   , regNo=WX 88, digit1=false, digit2=true, digit3=false, digit4=false, doubleDigit=true, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 07 10:43:24,181  INFO QueryTestDigits:33 - Plate [id=14, prefix=P  , letter1=F, letter2=C, number1=1, number2=1, number3= , number4= , suffix=   , regNo=PFC 11, digit1=false, digit2=true, digit3=false, digit4=false, doubleDigit=true, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 07 10:43:24,181  INFO QueryTestDigits:33 - Plate [id=16, prefix=P  , letter1=M, letter2=L, number1=5, number2=5, number3= , number4= , suffix=   , regNo=PML 55, digit1=false, digit2=true, digit3=false, digit4=false, doubleDigit=true, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 07 10:43:24,181  INFO QueryTestDigits:33 - Plate [id=18, prefix=P  , letter1=K, letter2=R, number1=6, number2=6, number3= , number4= , suffix=   , regNo=PKR 66, digit1=false, digit2=true, digit3=false, digit4=false, doubleDigit=true, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 07 10:43:24,181  INFO QueryTestDigits:33 - Plate [id=19, prefix=P  , letter1=L, letter2=A, number1=6, number2=6, number3= , number4= , suffix=   , regNo=PLA 66, digit1=false, digit2=true, digit3=false, digit4=false, doubleDigit=true, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 07 10:43:24,181  INFO QueryTestDigits:33 - Plate [id=20, prefix=P  , letter1=L, letter2=P, number1=6, number2=6, number3= , number4= , suffix=   , regNo=PLP 66, digit1=false, digit2=true, digit3=false, digit4=false, doubleDigit=true, tripleDigit=false, quadDigit=false, palindromic=true, paired=false, rating=0]
+Dec 07 10:43:24,181  INFO QueryTestDigits:38 - Done

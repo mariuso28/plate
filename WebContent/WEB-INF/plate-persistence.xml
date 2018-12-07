@@ -34,10 +34,16 @@ http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 		<property name="jdbcTemplate" ref="jdbcTemplate" />
 	</bean>
 
+	<bean id="queryDao"
+		class="org.plate.query.persistence.QueryDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+
 	<bean id="home"
 		class="org.plate.home.persistence.HomeImpl"> 
 		<property name="baseUserDao" ref="baseUserDao" />
 		<property name="plateDao" ref="plateDao" />
+		<property name="queryDao" ref="queryDao" />
 	</bean>
 
 </beans>

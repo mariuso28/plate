@@ -19,7 +19,7 @@ public class BaseUserDaoImpl extends NamedParameterJdbcDaoSupport implements Bas
 	private static Logger log = Logger.getLogger(BaseUserDaoImpl.class);
 
 	@Override
-	public void store(BaseUser bu) throws PersistenceRuntimeException {
+	public void store(final BaseUser bu) throws PersistenceRuntimeException {
 		bu.setId(UUID.randomUUID());
 		try
 		{
